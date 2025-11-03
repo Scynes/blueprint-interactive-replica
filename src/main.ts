@@ -22,3 +22,16 @@ if (header && navContainer && videoHero) {
 }
 
 initSolutionsCarousel();
+
+// Sound toggle button functionality
+const unmuteButton = document.getElementById('unmute-button');
+const soundIcon = document.getElementById('sound-icon') as HTMLImageElement;
+const videoElement = document.querySelector('.video-hero') as HTMLVideoElement;
+
+if (unmuteButton && soundIcon && videoElement) {
+    unmuteButton.addEventListener('click', () => {
+        videoElement.muted = !videoElement.muted;
+        soundIcon.src = videoElement.muted ? '/audio.png' : '/mute.png';
+        unmuteButton.setAttribute('aria-label', videoElement.muted ? 'Unmute video' : 'Mute video');
+    });
+}
