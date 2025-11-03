@@ -35,3 +35,21 @@ if (unmuteButton && soundIcon && videoElement) {
         unmuteButton.setAttribute('aria-label', videoElement.muted ? 'Unmute video' : 'Mute video');
     });
 }
+
+// Form modal functionality
+const form = document.querySelector('.lets-talk-content-wrapper > form');
+const modal = document.getElementById('modal');
+const closeModal = document.querySelector('.modal-close');
+
+if (form && modal && closeModal) {
+    form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        modal.classList.add('active');
+    });
+
+    const hideModal = () => modal.classList.remove('active');
+    closeModal.addEventListener('click', hideModal);
+    modal.addEventListener('click', (e) => {
+        if (e.target === modal) hideModal();
+    });
+}
