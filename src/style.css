@@ -6,9 +6,8 @@
 
 html, body {
     height: 100%;
-    font-family: system-ui, sans-serif;
+    font-family: "Work Sans", serif;
     -webkit-font-smoothing: antialiased;
-    color: aqua;
 }
 
 #app {
@@ -71,8 +70,47 @@ header {
 
 .video-hero {
     object-fit: cover;
-    max-height: 43.75rem;
+    max-height: 40rem;
     width: 100%;
+}
+
+/** About Us */
+.about-us-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem 1.5rem;
+    gap: 2rem;
+}
+
+.about-us-title {
+    max-width: 65rem;
+    font-size: clamp(1.8rem, 5vw, 3.125rem);
+    font-weight: 700;
+    text-align: center;
+    font-weight: 300;
+    line-height: 130%;
+}
+
+.about-us-title span {
+    color: #2151f3;
+    font-weight: 700;
+    font-style: italic;
+    font-family: "DM Serif Display", serif;
+}
+
+.business-partners-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 4rem;
+    padding-top: 3rem;
+}
+
+.business-partner-logo {
+    max-height: 3.75rem;
+    object-fit: contain;
 }
 
 @container (width <= 768px) {
@@ -84,5 +122,13 @@ header {
         flex-direction: column;
         justify-content: center;
         gap: 1rem;
+    }
+
+    .about-us-title {
+        text-align: left;
+    }
+
+    .business-partners-container {
+        padding-top: 2rem;
     }
 }
