@@ -120,7 +120,6 @@ header {
     justify-content: center;
     background-color: #24252a;
     padding: 6rem 1rem;
-    width: 100%;
 }
 
 .solutions-content-wrapper {
@@ -152,38 +151,80 @@ header {
 
 .solution-title.active::before {
     content: "";
-    width: 25px;
-    height: 25px;
-    background-image: url("/mobile_hover.png");
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    display: block;
     position: absolute;
     top: 50%;
     left: -35px;
+    width: 25px;
+    height: 25px;
+    background: url("/mobile_hover.png") center/contain no-repeat;
     transform: translateY(-50%);
-    flex-shrink: 0;
 }
 
 .solutions-content-container {
     position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    width: 100%;
+    max-width: 700px;
+}
+
+.solution-media-wrapper {
+    position: relative;
+    width: 100%;
 }
 
 .solution-content-image {
-    max-width: 700px;
     width: 100%;
+    height: auto;
     object-fit: cover;
     border-radius: 8px;
-    opacity: 1;
-    transition: opacity 0.6s ease;
+    transition: opacity 0.3s ease;
 }
 
 .solution-content-image.fading {
     opacity: 0;
+}
+
+.solution-content-image.hidden,
+.solution-video.hidden,
+.solution-play-button.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.solution-play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 10;
+    transition: transform 0.3s ease;
+}
+
+.solution-play-button:hover {
+    transform: translate(-50%, -50%) scale(1.1);
+}
+
+.solution-play-button:active {
+    transform: translate(-50%, -50%) scale(0.95);
+}
+
+.solution-play-button svg {
+    filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.3));
+    border: 2px solid #ffffff;
+    border-radius: 100%;
+}
+
+.solution-video {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: opacity 0.3s ease;
 }
 
 @container (width <= 768px) {
