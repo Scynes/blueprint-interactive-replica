@@ -10,3 +10,53 @@ html, body {
     -webkit-font-smoothing: antialiased;
     color: aqua;
 }
+
+/** Header */
+header {
+    container-type: inline-size;
+}
+
+.nav-container {
+    position: fixed;
+    inset: 0 0 auto 0;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 0.625rem 2rem;
+    box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.15);
+}
+
+.logo {
+    max-height: 2.831rem;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.social-links-container {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+}
+
+.social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.social-link img {
+    max-width: 24px
+}
+
+@container (width <= 768px) {
+    .nav-container {
+        flex-direction: column;
+        justify-content: center;
+        gap: 1rem;
+    }
+}
