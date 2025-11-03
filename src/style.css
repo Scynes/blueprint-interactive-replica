@@ -113,6 +113,79 @@ header {
     object-fit: contain;
 }
 
+/** Solutions */
+.solutions-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #24252a;
+    padding: 6rem 1rem;
+    width: 100%;
+}
+
+.solutions-content-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    max-width: 80rem;
+}
+
+.solution-title-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.solution-title {
+    position: relative;
+    font-size: clamp(1.7rem, 4vw, 2.1875rem);
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.6);
+    transition: color 0.4s ease;
+    cursor: pointer;
+}
+
+.solution-title.active {
+    color: #ffeb3b;
+}
+
+.solution-title.active::before {
+    content: "";
+    width: 25px;
+    height: 25px;
+    background-image: url("/mobile_hover.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: -35px;
+    transform: translateY(-50%);
+    flex-shrink: 0;
+}
+
+.solutions-content-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.solution-content-image {
+    max-width: 700px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+    opacity: 1;
+    transition: opacity 0.6s ease;
+}
+
+.solution-content-image.fading {
+    opacity: 0;
+}
+
 @container (width <= 768px) {
     header {
         position: relative;
@@ -130,5 +203,15 @@ header {
 
     .business-partners-container {
         padding-top: 2rem;
+    }
+
+    .solutions-container {
+        flex-direction: column;
+        padding: 4rem 1rem;
+    }
+
+    .solution-title-container {
+        margin-left: 2.5rem;
+        gap: 1.5rem;
     }
 }

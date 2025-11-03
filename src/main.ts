@@ -1,4 +1,5 @@
 import './style.css';
+import { initSolutionsCarousel } from './solutions-carousel';
 
 const header = document.querySelector('header');
 const navContainer = document.querySelector('.nav-container');
@@ -16,9 +17,8 @@ if (header && navContainer && videoHero) {
         }
     };
     
-    // Check on initial load
     handleScroll();
-    
-    // Listen for scroll events
     window.addEventListener('scroll', handleScroll, { passive: true });
 }
+
+initSolutionsCarousel();
