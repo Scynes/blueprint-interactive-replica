@@ -227,6 +227,86 @@ header {
     transition: opacity 0.3s ease;
 }
 
+/** Sets Us Apart */
+
+.sets-us-apart-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f6f2e7;
+}
+
+.sets-us-apart-content-wrapper {
+    display: flex;
+    flex-direction: column;
+    max-width: 80rem;
+    width: 100%;
+    padding: 6rem 1rem;
+    gap: 4rem;
+}
+
+.sets-us-apart-content-wrapper > h1 {
+    position: relative;
+    font-size: clamp(2.1rem, 5vw, 2.8rem);
+    font-weight: 700;
+    line-height: 130%;
+}
+
+.sets-us-apart-content-wrapper > h1::after {
+    content: "";
+    position: absolute;
+    margin-left: 0.5rem;
+    width: 20px;
+    height: 20px;
+    background: url("/circle_hover.png") center/contain no-repeat;
+    transform: translateY(135%);
+}
+
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(415px, 1fr));
+    gap: 1rem;
+}
+
+.card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    height: 290px;
+    width: 100%;
+    padding: 1.5rem;
+    gap: 1rem;
+}
+
+.card h4 {
+    font-size: clamp(1.9rem, 2vw, 2.4rem);
+    font-weight: 600;
+    z-index: 10;
+}
+
+.card p {
+    font-size: clamp(1.4rem, 1vw, 2rem);
+    font-weight: 400;
+    line-height: 130%;
+    max-width: 25rem;
+    z-index: 10;
+}
+
+.card-number {
+    position: absolute;
+    right: 10px;
+    bottom: 0;
+    max-height: 250px;
+    height: 100%;
+    object-fit: contain;
+}
+
+.card-icon {
+    width: 35px;
+    height: 35px;
+}
+
 @container (width <= 768px) {
     header {
         position: relative;
@@ -254,5 +334,22 @@ header {
     .solution-title-container {
         margin-left: 2.5rem;
         gap: 1.5rem;
+    }
+
+    .sets-us-apart-content-wrapper > h1::after {
+        transform: translateY(85%);
+    }
+
+    .card {
+        height: 270px;
+    }
+
+    .card-number {
+        max-height: 200px;
+    }
+
+    .cards-container {
+        grid-template-columns: none;
+        grid-template-rows: repeat(auto-fill, minmax(250px, 1fr));
     }
 }
