@@ -11,21 +11,32 @@ html, body {
     color: aqua;
 }
 
-/** Header */
-header {
+#app {
     container-type: inline-size;
 }
 
-.nav-container {
-    position: fixed;
-    inset: 0 0 auto 0;
+/** Header */
+header {
+    position: sticky;
+    top: 0;
     z-index: 100;
+}
+
+.nav-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
     padding: 0.625rem 2rem;
+    background-color: rgba(255, 255, 255, 1);
     box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.15);
+    transition: background-color 0.3s ease, backdrop-filter 0.3s ease;
+}
+
+.nav-container.glass-effect {
+    background-color: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
 }
 
 .logo {
@@ -53,7 +64,22 @@ header {
     max-width: 24px
 }
 
+/** Video Hero */
+.video-hero-container {
+    height: 100%;
+}
+
+.video-hero {
+    object-fit: cover;
+    max-height: 43.75rem;
+    width: 100%;
+}
+
 @container (width <= 768px) {
+    header {
+        position: relative;
+    }
+    
     .nav-container {
         flex-direction: column;
         justify-content: center;
