@@ -5,11 +5,11 @@ type Solution = {
 };
 
 const SOLUTIONS: Solution[] = [
-    { title: 'Congressional Races', image: '/solutions/Congressional-Reel.png', video: '/solutions/videos/BLU2451_Congressional-Reel-2024_1920x1080.mp4' },
-    { title: 'Independent Expenditure Ads', image: '/solutions/IE-Reel.png', video: '/solutions/videos/BLU2451_IE-Reel-2024_1920x1080.mp4' },
-    { title: 'State Legislature', image: '/solutions/State-Leg-Reel.png', video: '/solutions/videos/BLU2451_State-Leg-Reel-2024_1920x1080.mp4' },
-    { title: 'Local Races', image: '/solutions/Local-Reel.png', video: '/solutions/videos/BLU2451_Local-Reel-2024_1920x1080.mp4' },
-    { title: 'Video Production', image: '/solutions/Video-Production-Reel.png', video: '/solutions/videos/BLU2451_Video-Production-Reel-2024_1920x1080.mp4' }
+    { title: 'Congressional Races', image: './solutions/Congressional-Reel.png', video: './solutions/videos/BLU2451_Congressional-Reel-2024_1920x1080.mp4' },
+    { title: 'Independent Expenditure Ads', image: './solutions/IE-Reel.png', video: './solutions/videos/BLU2451_IE-Reel-2024_1920x1080.mp4' },
+    { title: 'State Legislature', image: './solutions/State-Leg-Reel.png', video: './solutions/videos/BLU2451_State-Leg-Reel-2024_1920x1080.mp4' },
+    { title: 'Local Races', image: './solutions/Local-Reel.png', video: './solutions/videos/BLU2451_Local-Reel-2024_1920x1080.mp4' },
+    { title: 'Video Production', image: './solutions/Video-Production-Reel.png', video: './solutions/videos/BLU2451_Video-Production-Reel-2024_1920x1080.mp4' }
 ];
 
 const ROTATE_INTERVAL = 5000;

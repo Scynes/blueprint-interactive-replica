@@ -31,7 +31,7 @@ const videoElement = document.querySelector('.video-hero') as HTMLVideoElement;
 if (unmuteButton && soundIcon && videoElement) {
     unmuteButton.addEventListener('click', () => {
         videoElement.muted = !videoElement.muted;
-        soundIcon.src = videoElement.muted ? '/audio.png' : '/mute.png';
+        soundIcon.src = videoElement.muted ? './audio.png' : './mute.png';
         unmuteButton.setAttribute('aria-label', videoElement.muted ? 'Unmute video' : 'Mute video');
     });
 }
